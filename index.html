@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Quevil | Answer Multiple Choice Questions For The Fun</title>
+    <script defer src="./js/controller.js"></script>
+  </head>
+  <body>
+    <!-- play section -->
+    <section class="sign-in">
+      <div class="container">
+        <div class="play-and-start-container">
+          <h1 class="app-name">QUEVIL</h1>
+          <div class="play-and-end-page">
+            <button class="btn play-button">play</button>
+            <button class="btn high-score-button">Highscore</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- input section -->
+      <div class="input-container hidden">
+        <form class="starting-input">
+          <p class="close">&times;</p>
+          <div class="inputs">
+            <div>
+              <input
+                type="text"
+                placeholder="Enter Your Name"
+                id="user-name"
+                required
+              />
+              <p class="error-message user-error hidden">No input</p>
+            </div>
+            <div>
+              <input
+                type="Number"
+                placeholder="Enter Amount Of Questions"
+                id="amount-of-question"
+                required
+              />
+              <p class="error-message amt-error hidden">No input</p>
+            </div>
+          </div>
+          <button type="button" class="btn start-button" id="start">
+            start
+          </button>
+        </form>
+        <div class="overlay"></div>
+      </div>
+    </section>
+
+    <!-- Highscore section -->
+    <section class="high-score hidden">
+      <div class="container">
+        <div class="play-and-start-container high-score-dark">
+          <h1 class="app-name-in-high-score">QUEVIL</h1>
+          <h1 class="high-score-name">HIGHSCORE</h1>
+          <div class="high-score-container">
+            <h2 class="empty">No current highscore</h2>
+          </div>
+          <button class="high-score-btn high-score-go-home">Go home</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- question section -->
+    <section class="question-section hidden">
+      <div class="container">
+        <div class="play-and-start-container">
+          <div class="header">
+            <h1 class="question-number">QUESTION 1</h1>
+            <h1 class="score"></h1>
+            <div class="progress-container">
+              <div class="progress-bar"></div>
+            </div>
+          </div>
+          <div class="question"></div>
+          <div class="answers">
+            <button class="btn choice" data-number="1"></button>
+            <button class="btn choice" data-number="2"></button>
+            <button class="btn choice" data-number="3"></button>
+            <button class="btn choice" data-number="4"></button>
+          </div>
+          <div class="restart-container">
+            <button class="btn restart">Restart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- score section -->
+    <section class="end-section hidden">
+      <div class="container">
+        <div class="play-and-start-container">
+          <h1 class="app-name-in-score">QUEVIL</h1>
+          <div class="play-and-end-page">
+            <h1 class="end-score"></h1>
+            <button class="btn save">Save</button>
+            <button class="btn play-again">Play Again</button>
+            <button class="btn go-home">Go home</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

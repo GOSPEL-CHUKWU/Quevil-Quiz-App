@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: East Sea Dokdo, system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+    sans-serif;
+  text-transform: capitalize;
+  /* color: white; */
+}
+body {
+  background: gray;
+}
+
+/* Play section */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.play-and-start-container {
+  border-radius: 5px;
+  background: white;
+}
+.app-name {
+  margin: 20px 80vh 15vh 20px;
+  font-size: 30px;
+}
+.play-and-end-page {
+  margin: 0 18vh 15vh 18vh;
+  display: grid;
+  grid-template-rows: repeat(2, 10vh);
+  gap: 40px;
+}
+.btn {
+  color: white;
+  background: black;
+  border-radius: 5px;
+  padding: 8px 38px 8px 38px;
+  font-size: 32px;
+}
+.btn:hover {
+  color: black;
+  background: white;
+  cursor: pointer;
+}
+
+/* Input section */
+.starting-input {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+
+  background-color: white;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+.inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  margin-left: 40px;
+}
+#user-name {
+  min-width: 300px;
+  font-size: 25px;
+  padding: 7px;
+}
+#amount-of-question {
+  min-width: 300px;
+  font-size: 25px;
+  padding: 7px;
+}
+.error-message {
+  background: red;
+  color: white;
+  text-align: center;
+  width: 25%;
+  font-size: 20px;
+  margin: 5px 0 0 26.8vh;
+}
+#start {
+  margin: 50px 0 0 47vh;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+.hidden {
+  display: none;
+}
+.close {
+  position: absolute;
+  top: 0rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Question section */
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 10vh 0 0;
+}
+.question-number {
+  margin: 25px 0 5vh 40px;
+  font-size: 40px;
+}
+.progress-container {
+  border-color: gray;
+  border-style: solid;
+  border-radius: 12px;
+  width: 12rem;
+  height: 2.5rem;
+  margin: 5vh 0 5vh 0;
+}
+.progress-bar {
+  height: 2.17rem;
+  width: 0;
+  background: black;
+  border-radius: 10px;
+}
+.question {
+  margin: 15px -190vh 12vh 22.5vh;
+  text-align: center;
+  font-size: 37px;
+  max-width: 70%;
+  height: 10vh;
+}
+.answers {
+  margin: 0 20vh 5vh 20vh;
+  display: grid;
+  grid-template-columns: repeat(2, 58vh);
+  gap: 30px;
+}
+.correct {
+  background: green;
+  color: white;
+  border-radius: 5px;
+  padding: 8px 38px 8px 38px;
+  font-size: 32px;
+}
+.incorrect {
+  background: red;
+  color: white;
+  border-radius: 5px;
+  padding: 8px 38px 8px 38px;
+  font-size: 32px;
+}
+.restart-container {
+  margin: 10vh 0 10vh 70vh;
+  font-size: 40px;
+}
+
+/* Score section*/
+.score {
+  margin: 25px 0 0 40px;
+  font-size: 40px;
+}
+.end-score {
+  margin: 0 0 5vh 0;
+  font-size: 40px;
+}
+.app-name-in-score {
+  margin: 20px 0 5vh 20px;
+  font-size: 30px;
+}
+
+/* Highscore section*/
+.app-name-in-high-score {
+  color: greenyellow;
+  margin: 20px 0 5vh 20px;
+  font-size: 30px;
+}
+.score {
+  margin: 25px 0 0 40px;
+  font-size: 40px;
+}
+.high-score-name {
+  margin: 0 18.5vh 5vh 35vh;
+  font-size: 40px;
+  color: greenyellow;
+}
+.high-score-dark {
+  background: rgb(27, 25, 25);
+  color: white;
+}
+.high-score-container {
+  margin: 0 5vh 10vh 5vh;
+  display: grid;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow-y: scroll;
+  height: 35vh;
+  border-radius: 10px;
+  width: 84vh;
+  cursor: pointer;
+}
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent; /* make scrollbar transparent */
+}
+.single-high-score {
+  border-radius: 10px;
+  background: black;
+  display: flex;
+  justify-content: space-between;
+  padding: 2vh 5vh 1.5vh 5vh;
+}
+.user-name {
+  color: blue;
+  font-size: 30px;
+}
+.user-score {
+  color: greenyellow;
+  font-size: 30px;
+}
+.remove {
+  color: rgba(241, 34, 34, 0.952);
+}
+.high-score-go-home {
+  margin: 0 0 10vh 35vh;
+}
+.high-score-btn {
+  color: black;
+  background: greenyellow;
+  border-radius: 5px;
+  padding: 8px 38px 8px 38px;
+  font-size: 32px;
+}
+.high-score-btn:hover {
+  color: greenyellow;
+  background: black;
+  cursor: pointer;
+}
+.empty {
+  margin: 15vh 0 0 22vh;
+  color: greenyellow;
+  font-size: 40px;
+}
