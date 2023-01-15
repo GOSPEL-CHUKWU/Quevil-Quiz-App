@@ -68,7 +68,7 @@ body {
   gap: 15px;
   margin-top: 25px;
   margin-bottom: 15px;
-  margin-left: 40px;
+  /* margin-left: 40px; */
 }
 #user-name {
   min-width: 300px;
@@ -86,7 +86,7 @@ body {
   text-align: center;
   width: 25%;
   font-size: 20px;
-  margin: 5px 0 0 26.8vh;
+  margin: 5px 0 0 32vh;
 }
 #start {
   margin: 50px 0 0 47vh;
